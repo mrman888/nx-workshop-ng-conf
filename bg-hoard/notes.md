@@ -14,3 +14,6 @@ npx nx affected:dep-graph --base=main --head=HEAD
 
 https://github.com/nrwl/nx-workshop/blob/master/docs
 https://github.com/nrwl/nx-workshop/blob/starting-lab8/apps/api/src/app/app.service.ts
+
+nx run-many --target=serve --all
+nx run-many --target=lint --all
