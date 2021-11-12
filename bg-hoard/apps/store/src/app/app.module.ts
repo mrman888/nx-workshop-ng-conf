@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     MatCardModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),],
+    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
