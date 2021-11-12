@@ -5,11 +5,13 @@ import { AppComponent, FormatRating } from './app.component';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, FormatRating],
   imports: [
     BrowserModule,
+    HttpClientModule,
     StoreUiSharedModule,
     MatCardModule,
     RouterModule.forRoot(
