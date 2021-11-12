@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent, FormatRating } from './app.component';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { AppComponent, FormatRating } from './app.component';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
 
 @NgModule({
   declarations: [AppComponent, FormatRating],
   imports: [
-    StoreUiSharedModule,
     BrowserModule,
+    StoreUiSharedModule,
     MatCardModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(
+      [
+        {
+          path: 'game/:id',
+          loadChildren: () =>
+            import('@bg-hoard/store/feature-game-detail').then(
+              (module) => module.StoreFeatureGameDetailModule
+            ),
+        },
+      ],
+      { initialNavigation: 'enabledBlocking' }
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent],
