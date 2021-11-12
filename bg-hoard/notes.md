@@ -17,3 +17,6 @@ https://github.com/nrwl/nx-workshop/blob/starting-lab8/apps/api/src/app/app.serv
 
 nx run-many --target=serve --all
 nx run-many --target=lint --all
+
+move
+nx generate @nrwl/workspace:move --destination=util-interface --projectName=api-util-interface --no-interactive
