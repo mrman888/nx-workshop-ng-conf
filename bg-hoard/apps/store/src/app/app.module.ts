@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { AppComponent } from './app.component';
+import { AppComponent, FormatRating } from './app.component';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FormatRating],
   imports: [
     StoreUiSharedModule,
     BrowserModule,
